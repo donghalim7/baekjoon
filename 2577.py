@@ -1,0 +1,16 @@
+A = int(input())
+B = int(input())
+C = int(input())
+
+sol = list(str(A * B * C))
+
+print(sol.count("0"))
+print(sol.count("1"))
+print(sol.count("2"))
+print(sol.count("3"))
+print(sol.count("4"))
+print(sol.count("5"))
+print(sol.count("6"))
+print(sol.count("7"))
+print(sol.count("8"))
+print(sol.count("9"))
