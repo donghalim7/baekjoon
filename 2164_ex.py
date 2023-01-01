@@ -44,4 +44,5 @@ print(deque[0])
         
 
 # print(arr[0])
+
 # deque를 사용하지 않은 방법
