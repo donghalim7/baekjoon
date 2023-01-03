@@ -11,7 +11,7 @@ for i in range(N):
     if cmd[0] == "push_front":
         dq.appendleft(int(cmd[1]))
     elif cmd[0] == "push_back":
-        dq.appendleft(int(cmd[1]))
+        dq.append(int(cmd[1]))
     elif cmd[0] == "pop_front":
         if len(dq) == 0:
             print(-1)
