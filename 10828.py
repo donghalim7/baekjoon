@@ -6,22 +6,22 @@ dq = deque()
 
 for i in range(N):
     cmd = list(sys.stdin.readline().rstrip().split())
-    if cmd[0] = "push":
+    if cmd[0] == "push":
         dq.append(int(cmd[1]))
-    elif cmd[0] = "pop":
+    elif cmd[0] == "pop":
         if len(dq) == 0:
             print(-1)
         else:
-            dq.pop()
-    elif cmd[0] = "size":
+            print(dq.pop())
+    elif cmd[0] == "size":
         print(len(dq))
-    elif cmd[0] = "empty":
+    elif cmd[0] == "empty":
         if len(dq) == 0:
             print(1)
         else:
             print(0)
 
-    elif cmd[0] = "top":
+    elif cmd[0] == "top":
         if len(dq) == 0:
             print(-1)
         else:
