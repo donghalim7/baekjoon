@@ -13,4 +13,6 @@ for i in body:
     rank = 1
     
     for j in body:
-        
+        if i[0] < j[0] and i[1] < j[1]:
+                rank += 1
+    print(rank, end = " ")
