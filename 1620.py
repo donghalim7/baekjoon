@@ -7,7 +7,8 @@ num = 1
 
 for _ in range(n):
     name = sys.stdin.readline().rstrip()
-    dict[num] = name
+    pokemon[num] = name
+    num += 1
 
 pokemon_rev = {v:k for k, v in pokemon.items()}
 
