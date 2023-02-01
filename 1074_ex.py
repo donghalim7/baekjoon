@@ -1,32 +1,34 @@
 import sys
-input = sys.stdin.readline
+sys.setrecursionlimit(10**3)
 
-n, r, c = map(int, input().split())
+N, r, c = map(int,input().split())
+size = 2**N
 
-# n: 변의 길이,x: 현재 위치의 x축 값, y:현재 위치의 y축 값
-result = 0
-def N(n, x, y):
-    global result
+def dfs(row, col, n, value):
+    n = n // 2
 
-    if x==r and y==c:
-        print(int(result))
-        exit(0)
+    if row < n and col < n:
+        if n == 1:
+            print(value)
+            exit(0)
+        dfs(row, col, n, value)
 
-    if n == 1:
-        result += 1
-        return
+    elif row < n and col >= n:
+        if n == 1:
+            print(value + 1)
+            exit(0)
+        dfs(row, col - n, n, value + n ** 2)
 
-    if not(x<=r<x+n and y<=c<y+n):
-        result += n*n
-        return
+    elif row >= n and col < n:
+        if n == 1:
+            print(value + 2)
+            exit(0)
+        dfs(row - n, col, n, value + n ** 2 * 2)
 
-    # 1사분면
-    N(n/2, x, y)
-    # 2사분면
-    N(n/2, x, y+n/2)
-    # 3사분면
-    N(n/2, x+n/2, y)
-    # 4사분면
-    N(n/2, x+n/2, y+n/2)
+    elif row >= n and col >= n:
+        if n == 1:
+            print(value + 3)
+            exit(0)
+        dfs(row - n, col - n, n, value + n ** 2 * 3)
 
-N(2**n, 0, 0)
+dfs(r,c,size,0)
