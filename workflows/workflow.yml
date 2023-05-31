@@ -14,9 +14,9 @@ jobs:
       - name: repository checkout
         uses: actions/checkout@v2
         with:
-          repository: jujumilk3/infra-study
+          repository: baekjoon/workflows
           token: ${{ secrets.MY_GITHUB_TOKEN }}
-          path: infra-study
+          path: workflows
 
       - name: Add date and push
         run: |
