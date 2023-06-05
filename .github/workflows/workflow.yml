@@ -23,7 +23,7 @@ jobs:
          cd workflows
          date >> date.txt
          git add .
-         git config --global user.email "github-actions@github.com"
-         git config --global user.name "github-actions"
+         git config --global user.email "donghalim7@gmail.com"
+         git config --global user.name "Dongha Lim"
          git commit -am "Inject Date"
          git push
